@@ -1,9 +1,42 @@
-1.- Clone repositorio de mi dotly
+> 🚨🚨🚨 This repo is in development, use with caution!!! 🚨🚨🚨
 
-2.- Ejecutar algun script para reinstalar todo? alias, zsh, symlinks, ...
+<p align="center">
+  <a href="http://codely.tv">
+    <img src="http://codely.tv/wp-content/uploads/2016/05/cropped-logo-codelyTV.png" width="192px" height="192px"/>
+  </a>
+</p>
 
-3. path/hasta/el/comando/dot self install
+<h1 align="center">
+  🐢  💨 dotly: An opinionated Zsh framework focused on dotfiles
+</h1>
 
-Y con eso debería de funcionarte 100% :)
+<p align="center">
+    <a href="https://github.com/CodelyTV"><img src="https://img.shields.io/badge/CodelyTV-OS-green.svg?style=flat-square" alt="codely.tv"/></a>
+    <a href="http://pro.codely.tv"><img src="https://img.shields.io/badge/CodelyTV-PRO-black.svg?style=flat-square" alt="CodelyTV Courses"/></a>
+</p>
 
-Este instalador (en el caso que sea este el que debo ejecutar) ya me instalaria las apps guardadas en los ficheros Brewfile, ...?
+## Installation
+
+Using curl
+```bash
+bash <(curl -s https://raw.githubusercontent.com/CodelyTV/dotly/master/installer)
+```
+
+Using wget
+```bash
+wget -O - https://raw.githubusercontent.com/CodelyTV/dotly/master/installer | bash
+```
+
+
+## System reset
+O
+
+Instalar desde dotly original y luego un merge con el nuestro. 
+
+```bash
+install git && git clone [your repository of dotfiles] $HOME/.dotfiles && $HOME/.dotfiles/dot self install
+```
+
+Original:
+https://github.com/CodelyTV/dotly
+
