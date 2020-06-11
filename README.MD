@@ -29,10 +29,8 @@ wget -O - https://raw.githubusercontent.com/CodelyTV/dotly/master/installer | ba
 
 
 ## System reset
-O
-
 Instalar desde dotly original y luego un merge con el nuestro. 
-
+O
 ```bash
 install git && git clone [your repository of dotfiles] $HOME/.dotfiles && $HOME/.dotfiles/dot self install
 ```
