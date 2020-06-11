@@ -1,7 +1,7 @@
 alias ..="cd .."
 alias ...="cd ../.."
-alias ll="ls -l"
-alias la="ls -la"
+alias ll="exa -l"
+alias la="exa -la"
 
 # Jumps
 alias ~="cd ~"
