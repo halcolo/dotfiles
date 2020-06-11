@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTFILES_PATH/scripts/core/_main.sh"
+
+##? Export all installed packages
+#?? 1.0.0
+##?
+##? Usage:
+##?    export
+
+docs::eval "$@"
+
+if hash brew 2>/dev/null; then
+        gdate "$@"
+        echo 'Brew apps exported!'
+fi
+
+if hash apt 2>/dev/null; then
+    sudo apt list --installed > apt-installed.txt
+    echo 'apt apps exported!'
+fi
+
+
+pip freeze >"$DOTFILES_PATH/langs/python/requirements.txt"
+echo 'Python apps exported!'
+
+npm root -g | xargs -I_ ls -1 _ | grep -v npm >"$DOTFILES_PATH/langs/js/global_modules.txt"
+echo 'NPM apps exported!'

@@ -1,0 +1,6 @@
+--2020-06-11 18:56:48--  https://github.com/sharkdp/bat/releases/download/v0.15.4/bat_0.11.0_amd64.deb
+Resolving github.com (github.com)... 140.82.114.4
+Connecting to github.com (github.com)|140.82.114.4|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2020-06-11 18:59:29 ERROR 404: Not Found.
+

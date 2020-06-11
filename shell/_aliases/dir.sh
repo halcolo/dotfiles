@@ -5,3 +5,5 @@ alias la="exa -la"
 
 # Jumps
 alias ~="cd ~"
+alias cdc="cd ~/projects"
+alias dotfiles="cd ~/.dotfiles"
