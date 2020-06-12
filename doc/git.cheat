@@ -1,0 +1,4 @@
+% Git
+
+# User and password will then be remembered later. 
+git config --global credential.helper store
