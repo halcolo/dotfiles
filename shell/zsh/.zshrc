@@ -2,6 +2,7 @@
 # zmodload zsh/zprof
 
 export DOTFILES_PATH=$HOME/.dotfiles
+export DOTLY_PATH="$DOTFILES_PATH/modules/dotly"
 export ZIM_HOME=${ZDOTDIR:-${HOME}}/.dotfiles/modules/dotly/modules/zimfw
 
 # ZSH Ops

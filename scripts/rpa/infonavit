@@ -1,3 +1,8 @@
 #!/usr/bin/env python
 import rpa as r
-r.init()
+import sys
+r.init(visual_automation = True)
+r.url('http://precalificaciones.infonavit.org.mx/Precalificacion/precalif.xhtml?tipoProducto=CI');
+r.type('//*[@id="precalif:nssTitular"]', '0');
+r.type('//*[@id="precalif:fechaTitular"]', sys.argv[2]);
+r.type('//*[@id="precalif:nssTitular"]',  sys.argv[1] );

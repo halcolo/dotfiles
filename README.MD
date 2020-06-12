@@ -42,6 +42,7 @@ install git && git clone [your repository of dotfiles] $HOME/.dotfiles && $HOME/
  - pip install docopt
  - wget https://github.com/sharkdp/bat/releases/download/v0.15.4/bat_0.15.4_amd64.deb && sudo dpkg -i bat_0.15.4_amd64.deb 
  - sudo apt install gdebi
+ - chmod -R 775 scripts
 
 ## Docs
 ```
@@ -57,7 +58,6 @@ navi
 
 ## Self install
 dot self install
-
 
 ## Self update
 dot self update
