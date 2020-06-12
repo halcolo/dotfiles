@@ -55,6 +55,13 @@ install git && git clone [your repository of dotfiles] $HOME/.dotfiles && $HOME/
 navi
 ```
 
+## Self install
+dot self install
+
+
+## Self update
+dot self update
+
 Original:
 https://github.com/CodelyTV/dotly
 
