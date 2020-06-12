@@ -32,6 +32,26 @@ wget -O - https://raw.githubusercontent.com/CodelyTV/dotly/master/installer | ba
 Instalar desde dotly original y luego un merge con el nuestro. 
 O
 ```bash
+install git && git clone [your repository of dotfiles] $HOME/.dotfiles && $HOME/.dotfiles/dot self install
+```
+
+## Dependecies
+ - Cargo
+ - Julia
+ - cargo install Navi
+ - pip install docopt
+ - wget https://github.com/sharkdp/bat/releases/download/v0.15.4/bat_0.15.4_amd64.deb && sudo dpkg -i bat_0.15.4_amd64.deb 
+ - sudo apt install gdebi
+
+## Docs
+```
+  % TAG
+
+  # Use
+  echo "HOLA"
+
+```
+```bash
 navi
 ```
 
