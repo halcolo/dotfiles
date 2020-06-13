@@ -28,7 +28,7 @@ echo 'Python apps exported!'
 
 npm root -g | xargs -I_ ls -1 _ | grep -v npm >"$DOTFILES_PATH/langs/js/global_modules.txt"
 echo 'NPM apps exported!'
-
+cd $DOTFILES_PATH
 git add .
 git commit -m "New backup"
 git push -u origin master
