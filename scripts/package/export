@@ -30,5 +30,5 @@ npm root -g | xargs -I_ ls -1 _ | grep -v npm >"$DOTFILES_PATH/langs/js/global_m
 echo 'NPM apps exported!'
 cd $DOTFILES_PATH
 git add .
-git commit -m "cest-ubuntu daily new backup"
+git commit -m "cest-ubuntu daily backup"
 git push -u origin master
