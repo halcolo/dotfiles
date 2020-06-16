@@ -1,0 +1,33 @@
+#!/usr/bin/env python
+import rpa as r
+import sys
+r.init(visual_automation = True);
+r.url('https://www.sat.gob.mx/tramites/operacion/28753/obten-tu-rfc-con-la-clave-unica-de-registro-de-poblacion-curp');
+r.wait(5);
+r.url('https://rfcampc.siat.sat.gob.mx/PTSC/IdcSiat/IDCPersonaFisicaCURP/TramiteInscripcionPersonaFisicaCURP.jsf');
+r.wait(5);
+r.type('//*[@id="formContenido:curp"]',sys.argv[1]);
+catpcha=r.ask();
+r.type('//*[@id="formContenido:captchaInput"]', catpcha);
+r.click('/html/body/div[3]/div/div/div/div[2]/form/div/div/div/div/div[3]/button[2]/span');
+r.mouse('down');
+r.click('//*[@id="formContenido:btnAceptarClic"]');
+r.type('//*[@id="formContenido:itCp"]', '22800');
+r.click('//*[@id="formContenido:somLocalidad_label"]');
+r.wait(1);
+r.click('/html/body/div[3]/div/div/div/div[2]/form/div/div/div/div/div[1]/div[2]/table/tbody/tr/td[1]/table[1]/tbody/tr[4]/td[2]/div/div[3]');
+r.click('/html/body/div[32]/div[2]/ul/li[2]');
+r.click('/html/body/div[3]/div/div/div/div[2]/form/div/div/div/div/div[1]/div[2]/table/tbody/tr/td[1]/table[1]/tbody/tr[4]/td[3]/div/div[3]/span');
+r.click('/html/body/div[33]/div[2]/ul/li[2]');
+r.type('//*[@id="formContenido:nombreCalle"]', 'B');
+r.type('//*[@id="formContenido:noExterior"]', '1');
+r.type('//*[@id="formContenido:entreCalle"]', '3');
+r.type('//*[@id="formContenido:yCalle"]', '1');
+r.mouse('down');
+r.type('//*[@id="formContenido:referencias"]', 'Cerca de tienda de autoservicio');
+r.click('//*[@id="formContenido:RegresarDetalle"]');
+r.wait(1);
+r.popup('https://rfcampc.siat.sat.gob.mx/PTSC/IdcSiat/AcuseDomicilioContacto.jsf');
+r.wait(1);
+r.keyboard('[ctrl]p');
+r.keyboard('[enter]');

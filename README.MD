@@ -43,6 +43,9 @@ install git && git clone [your repository of dotfiles] $HOME/.dotfiles && $HOME/
  - wget https://github.com/sharkdp/bat/releases/download/v0.15.4/bat_0.15.4_amd64.deb && sudo dpkg -i bat_0.15.4_amd64.deb 
  - sudo apt install gdebi
  - chmod -R 775 scripts
+ - crontab -e
+ - docker
+ - sudo chmod 666 /var/run/docker.sock
 
 ## Docs
 ```

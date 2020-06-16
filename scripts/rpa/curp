@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+import rpa as r
+import sys
+r.init();
+r.url('https://www.gob.mx/curp/');
+r.type('//*[@id="curpinput"]', sys.argv[1]);
