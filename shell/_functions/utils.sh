@@ -1,8 +1,6 @@
 function generate_backup() {
   crontab -l > mycron
-  echo "HOME='$HOME'" >> mycron
-  echo '0 20 * * *  /bin/zsh "$DOTFILES_PATH/scripts/package/export"' >> mycron
-  echo '0 18 * * *' gnome-session-quit --force
+  echo "0 20 * * *  env DOTFILES_PATH='$DOTFILES_PATH' $DOTFILES_PATH/scripts/package/export" >> mycron
   crontab mycron
   rm mycron
 }
