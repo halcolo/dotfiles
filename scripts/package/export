@@ -18,7 +18,7 @@ if hash brew 2>/dev/null; then
 fi
 
 if hash apt 2>/dev/null; then
-    apt list --installed > apt-installed.txt
+    apt list --installed > "$DOTFILES_PATH/langs/apt/apt-installed.txt" 
     echo 'apt apps exported!'
 fi
 
@@ -30,5 +30,5 @@ npm root -g | xargs -I_ ls -1 _ | grep -v npm >"$DOTFILES_PATH/langs/js/global_m
 echo 'NPM apps exported!'
 cd $DOTFILES_PATH
 git add .
-git commit -m "cest-ubuntu daily backup"
+git commit -m "cest-ubuntu daily new backup"
 git push -u origin master
