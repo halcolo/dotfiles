@@ -18,7 +18,7 @@ if hash brew 2>/dev/null; then
 fi
 
 if hash apt 2>/dev/null; then
-    sudo apt list --installed > apt-installed.txt
+    apt list --installed > apt-installed.txt
     echo 'apt apps exported!'
 fi
 
