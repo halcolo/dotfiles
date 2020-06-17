@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+import rpa as userInterface
+import sys
+
+class IntefaceInfonavitWorkshop:
+   URL = 'http://tallerlinea.infonavit.org.mx/wps/Taller/'
+   NSS_INPUT = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[1]/td[2]/input'
+   BIRTHDAY_INPUT = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[1]/select'
+   BIRTH_MONTH_INPUT = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[2]/select'
+   BIRTH_YEAR_INPUT = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[3]/select'
+   FIRST_BUTTON_CALLED_SEND = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr/td[1]/button'
+
+class InfonavitWorkshopSolver:
+  def __init__(self, nss, birthday, birthMonth, birthYear):
+    self.nss = nss
+    self.birthday = birthday if len(birthday) == 2  else '0'+birthday
+    self.birthMonth = birthMonth if len(birthMonth) == 2  else '0'+birthMonth
+    self.birthYear = birthYear
+   
+  def solve(self):
+    userInterface.init(visual_automation = True);
+    userInterface.url(IntefaceInfonavitWorkshop.URL);
+    userInterface.type(IntefaceInfonavitWorkshop.NSS_INPUT, self.nss);
+    userInterface.select(IntefaceInfonavitWorkshop.BIRTHDAY_INPUT,self.birthday);
+    userInterface.select(IntefaceInfonavitWorkshop.BIRTH_MONTH_INPUT, self.birthMonth);
+    userInterface.select(IntefaceInfonavitWorkshop.BIRTH_YEAR_INPUT, self.birthYear);
+    userInterface.click(IntefaceInfonavitWorkshop.FIRST_BUTTON_CALLED_SEND);
+    
+infonavitWorkshopSolver = InfonavitWorkshopSolver(
+    nss=sys.argv[1],
+    birthday=sys.argv[2],
+    birthMonth=sys.argv[3],
+    birthYear=sys.argv[4]
+);
+infonavitWorkshopSolver.solve()
