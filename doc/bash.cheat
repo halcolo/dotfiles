@@ -1,0 +1,19 @@
+% Bash
+
+# Find a command
+which -a <command>
+
+# Standard find a command
+command -v <command>
+
+# Find filenames quickly.
+locate <command>
+
+# Recompute the database. You need to do it if you want to find recently added files:
+sudo updatedb
+
+# Search for and list all cron jobs
+cronitor list
+
+# Select a cron job to run interactively
+cronitor select

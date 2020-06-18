@@ -1,0 +1,4 @@
+% Shellcheck
+
+# Finds bugs in your shell scripts.
+shellcheck <file>
