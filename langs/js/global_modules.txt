@@ -1,3 +1,7 @@
 @angular
 firebase-tools
+jest
+prettier
+tsconfig-paths
+tscpaths
 typescript

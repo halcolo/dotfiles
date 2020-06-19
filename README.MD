@@ -46,6 +46,7 @@ install git && git clone [your repository of dotfiles] $HOME/.dotfiles && $HOME/
  - crontab -e
  - docker
  - sudo chmod 666 /var/run/docker.sock
+ - installed my favorite projects
 
 ## Docs
 ```
