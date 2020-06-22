@@ -1,38 +1,132 @@
 
-START - automation started - Tue Jun 16 2020 11:50:03 GMT-0700 (PDT)
+START - automation started - Sun Jun 21 2020 11:27:36 GMT-0700 (PDT)
 
 LIVE MODE - type done to quit
  [RPA][STARTED]
 [RPA][0] - listening for inputs
-[RPA][1] - http://tallerlinea.infonavit.org.mx/wps/Taller/
+[RPA][1] - https://www.sat.gob.mx/tramites/operacion/28753/obten-tu-rfc-con-la-clave-unica-de-registro-de-poblacion-curp
 [RPA][1] - listening for inputs
-[RPA][2] - exist_result = exist('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[1]/td[2]/input').toString()
+[RPA][2] - https://rfcampc.siat.sat.gob.mx/PTSC/IdcSiat/IDCPersonaFisicaCURP/TramiteInscripcionPersonaFisicaCURP.jsf
 [RPA][2] - listening for inputs
-[RPA][3] - dump exist_result to rpa_python.txt
+[RPA][3] - exist_result = exist('//*[@id="formContenido:curp"]').toString()
 [RPA][3] - listening for inputs
-[RPA][4] - type /html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[1]/td[2]/input as 21078936362
+[RPA][4] - dump exist_result to rpa_python.txt
 [RPA][4] - listening for inputs
-[RPA][5] - exist_result = exist('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[1]/select').toString()
+[RPA][5] - type //*[@id="formContenido:curp"] as BECA530105MSRNRM07
 [RPA][5] - listening for inputs
-[RPA][6] - dump exist_result to rpa_python.txt
+[RPA][6] - dom return prompt('')
 [RPA][6] - listening for inputs
-[RPA][7] - select /html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[1]/select as 01
+[RPA][7] - dump dom_result to rpa_python.txt
 [RPA][7] - listening for inputs
-[RPA][8] - exist_result = exist('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[2]/select').toString()
+[RPA][8] - exist_result = exist('//*[@id="formContenido:captchaInput"]').toString()
 [RPA][8] - listening for inputs
 [RPA][9] - dump exist_result to rpa_python.txt
 [RPA][9] - listening for inputs
-[RPA][10] - select /html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[2]/select as 11
+[RPA][10] - type //*[@id="formContenido:captchaInput"] as DV5S5
 [RPA][10] - listening for inputs
-[RPA][11] - exist_result = exist('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[3]/select').toString()
+[RPA][11] - exist_result = exist('/html/body/div[3]/div/div/div/div[2]/form/div/div/div/div/div[3]/button[2]/span').toString()
 [RPA][11] - listening for inputs
 [RPA][12] - dump exist_result to rpa_python.txt
 [RPA][12] - listening for inputs
-[RPA][13] - select /html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[3]/select as 1989
+[RPA][13] - click /html/body/div[3]/div/div/div/div[2]/form/div/div/div/div/div[3]/button[2]/span
 [RPA][13] - listening for inputs
-[RPA][14] - exist_result = exist('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr/td[1]/button').toString()
+[RPA][14] - mouse down
 [RPA][14] - listening for inputs
-[RPA][15] - dump exist_result to rpa_python.txt
+[RPA][15] - exist_result = exist('//*[@id="formContenido:btnAceptarClic"]').toString()
 [RPA][15] - listening for inputs
-[RPA][16] - click /html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr/td[1]/button
+[RPA][16] - dump exist_result to rpa_python.txt
 [RPA][16] - listening for inputs
+[RPA][17] - click //*[@id="formContenido:btnAceptarClic"]
+[RPA][17] - listening for inputs
+[RPA][18] - exist_result = exist('//*[@id="formContenido:itCp"]').toString()
+[RPA][18] - listening for inputs
+[RPA][19] - dump exist_result to rpa_python.txt
+[RPA][19] - listening for inputs
+[RPA][20] - type //*[@id="formContenido:itCp"] as 22800
+[RPA][20] - listening for inputs
+[RPA][21] - exist_result = exist('//*[@id="formContenido:somLocalidad_label"]').toString()
+[RPA][21] - listening for inputs
+[RPA][22] - dump exist_result to rpa_python.txt
+[RPA][22] - listening for inputs
+[RPA][23] - click //*[@id="formContenido:somLocalidad_label"]
+[RPA][23] - listening for inputs
+[RPA][24] - exist_result = exist('/html/body/div[3]/div/div/div/div[2]/form/div/div/div/div/div[1]/div[2]/table/tbody/tr/td[1]/table[1]/tbody/tr[4]/td[2]/div/div[3]').toString()
+[RPA][24] - listening for inputs
+[RPA][25] - dump exist_result to rpa_python.txt
+[RPA][25] - listening for inputs
+[RPA][26] - click /html/body/div[3]/div/div/div/div[2]/form/div/div/div/div/div[1]/div[2]/table/tbody/tr/td[1]/table[1]/tbody/tr[4]/td[2]/div/div[3]
+[RPA][26] - listening for inputs
+[RPA][27] - exist_result = exist('/html/body/div[32]/div[2]/ul/li[2]').toString()
+[RPA][27] - listening for inputs
+[RPA][28] - dump exist_result to rpa_python.txt
+[RPA][28] - listening for inputs
+[RPA][29] - click /html/body/div[32]/div[2]/ul/li[2]
+[RPA][29] - listening for inputs
+[RPA][30] - exist_result = exist('/html/body/div[3]/div/div/div/div[2]/form/div/div/div/div/div[1]/div[2]/table/tbody/tr/td[1]/table[1]/tbody/tr[4]/td[3]/div/div[3]/span').toString()
+[RPA][30] - listening for inputs
+[RPA][31] - dump exist_result to rpa_python.txt
+[RPA][31] - listening for inputs
+[RPA][32] - click /html/body/div[3]/div/div/div/div[2]/form/div/div/div/div/div[1]/div[2]/table/tbody/tr/td[1]/table[1]/tbody/tr[4]/td[3]/div/div[3]/span
+[RPA][32] - listening for inputs
+[RPA][33] - exist_result = exist('/html/body/div[33]/div[2]/ul/li[2]').toString()
+[RPA][33] - listening for inputs
+[RPA][34] - dump exist_result to rpa_python.txt
+[RPA][34] - listening for inputs
+[RPA][35] - click /html/body/div[33]/div[2]/ul/li[2]
+[RPA][35] - listening for inputs
+[RPA][36] - exist_result = exist('//*[@id="formContenido:nombreCalle"]').toString()
+[RPA][36] - listening for inputs
+[RPA][37] - dump exist_result to rpa_python.txt
+[RPA][37] - listening for inputs
+[RPA][38] - type //*[@id="formContenido:nombreCalle"] as B
+[RPA][38] - listening for inputs
+[RPA][39] - exist_result = exist('//*[@id="formContenido:noExterior"]').toString()
+[RPA][39] - listening for inputs
+[RPA][40] - dump exist_result to rpa_python.txt
+[RPA][40] - listening for inputs
+[RPA][41] - type //*[@id="formContenido:noExterior"] as 1
+[RPA][41] - listening for inputs
+[RPA][42] - exist_result = exist('//*[@id="formContenido:entreCalle"]').toString()
+[RPA][42] - listening for inputs
+[RPA][43] - dump exist_result to rpa_python.txt
+[RPA][43] - listening for inputs
+[RPA][44] - type //*[@id="formContenido:entreCalle"] as 3
+[RPA][44] - listening for inputs
+[RPA][45] - exist_result = exist('//*[@id="formContenido:yCalle"]').toString()
+[RPA][45] - listening for inputs
+[RPA][46] - dump exist_result to rpa_python.txt
+[RPA][46] - listening for inputs
+[RPA][47] - type //*[@id="formContenido:yCalle"] as 1
+[RPA][47] - listening for inputs
+[RPA][48] - mouse down
+[RPA][48] - listening for inputs
+[RPA][49] - exist_result = exist('//*[@id="formContenido:referencias"]').toString()
+[RPA][49] - listening for inputs
+[RPA][50] - dump exist_result to rpa_python.txt
+[RPA][50] - listening for inputs
+[RPA][51] - type //*[@id="formContenido:referencias"] as Cerca de tienda de autoservicio
+[RPA][51] - listening for inputs
+[RPA][52] - exist_result = exist('//*[@id="formContenido:RegresarDetalle"]').toString()
+[RPA][52] - listening for inputs
+[RPA][53] - dump exist_result to rpa_python.txt
+[RPA][53] - listening for inputs
+[RPA][54] - click //*[@id="formContenido:RegresarDetalle"]
+[RPA][54] - listening for inputs
+[RPA][55] - js if (chrome_targetid !== "") {found_targetid = chrome_targetid; chrome_targetid = ""; chrome_step("Target.detachFromTarget", {sessionId: found_targetid});}
+[RPA][55] - listening for inputs
+[RPA][56] - js found_targetid = ""; chrome_targets = []; ws_message = chrome_step("Target.getTargets", {});
+[RPA][56] - listening for inputs
+[RPA][57] - js try {ws_json = JSON.parse(ws_message); if (ws_json.result.targetInfos) chrome_targets = ws_json.result.targetInfos; else chrome_targets = [];} catch (e) {chrome_targets = [];}
+[RPA][57] - listening for inputs
+[RPA][58] - js chrome_targets.forEach(function(target) {if (target.url.indexOf("https://rfcampc.siat.sat.gob.mx/PTSC/IdcSiat/AcuseDomicilioContacto.jsf") !== -1) found_targetid = target.targetId;})
+[RPA][58] - listening for inputs
+[RPA][59] - js if (found_targetid !== "") {ws_message = chrome_step("Target.attachToTarget", {targetId: found_targetid}); try {ws_json = JSON.parse(ws_message); if (ws_json.result.sessionId !== "") found_targetid = ws_json.result.sessionId; else found_targetid = "";} catch (e) {found_targetid = "";}}
+[RPA][59] - listening for inputs
+[RPA][60] - js chrome_targetid = found_targetid
+[RPA][60] - listening for inputs
+[RPA][61] - dump chrome_targetid to rpa_python.txt
+[RPA][61] - listening for inputs
+[RPA][62] - keyboard [ctrl]p
+[RPA][62] - listening for inputs
+[RPA][63] - keyboard [enter]
+[RPA][63] - listening for inputs
