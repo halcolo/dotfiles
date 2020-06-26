@@ -9,3 +9,17 @@ tsconfig-paths
 tscpaths
 typescript
 NPM apps exported!
+[master 931b19a] cest-ubuntu daily backup
+ 4 files changed, 38 insertions(+), 25 deletions(-)
+ create mode 100644 bin/backup
+Begin Fri Jun 26 13:38:00 PDT 2020
+apt apps exported!
+Python apps exported!
+@angular
+firebase-tools
+jest
+prettier
+tsconfig-paths
+tscpaths
+typescript
+NPM apps exported!
