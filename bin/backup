@@ -54,3 +54,18 @@ tsconfig-paths
 tscpaths
 typescript
 NPM apps exported!
+[master a050098] cest-ubuntu daily backup2
+ 2 files changed, 16 insertions(+), 2 deletions(-)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+End Fri Jun 26 15:03:22 PDT 2020
+Begin Fri Jun 26 15:04:07 PDT 2020
+apt apps exported!
+Python apps exported!
+@angular
+firebase-tools
+jest
+prettier
+tsconfig-paths
+tscpaths
+typescript
+NPM apps exported!

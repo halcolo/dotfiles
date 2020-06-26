@@ -32,8 +32,8 @@ npm root -g | xargs -I_ ls -1 _ | grep -v npm >"$DOTFILES_PATH/langs/js/global_m
 echo 'NPM apps exported!' >> $DOTFILES_PATH/bin/backup
 
 cd $DOTFILES_PATH
-git add .  >> $DOTFILES_PATH/bin/backup
-git commit -m "cest-ubuntu daily backup2" >> $DOTFILES_PATH/bin/backup
-git push -u origin master >> $DOTFILES_PATH/bin/backup
+git add .
+git commit -m "cest-ubuntu daily backup2"
+git push -u origin master
 
 echo "End $(date)" >> $DOTFILES_PATH/bin/backup >> $DOTFILES_PATH/bin/backup
