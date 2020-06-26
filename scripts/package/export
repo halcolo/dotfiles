@@ -5,7 +5,7 @@ set -euo pipefail
 source "$DOTFILES_PATH/scripts/core/_main.sh"
 
 ##? Export all installed packages
-#?? 1.4.0
+#?? 2.0.0
 ##?
 ##? Usage:
 ##?    export
@@ -28,12 +28,12 @@ fi
 pip freeze >"$DOTFILES_PATH/langs/python/requirements.txt"
 echo 'Python apps exported!' >> $DOTFILES_PATH/bin/backup
 
-npm root -g | xargs -I_ ls -1 _ | grep -v npm >"$DOTFILES_PATH/langs/js/global_modules.txt" >> $DOTFILES_PATH/bin/backup
+npm root -g | xargs -I_ ls -1 _ | grep -v npm >"$DOTFILES_PATH/langs/js/global_modules.txt"
 echo 'NPM apps exported!' >> $DOTFILES_PATH/bin/backup
 
 cd $DOTFILES_PATH
-git add .
-git commit -m "cest-ubuntu daily backup2"
-git push -u origin master
+git add .  >> $DOTFILES_PATH/bin/backup >> $DOTFILES_PATH/bin/backup
+git commit -m "cest-ubuntu daily backup" >> $DOTFILES_PATH/bin/backup
+git push -u origin master >> $DOTFILES_PATH/bin/backup
 
 echo "End $(date)" >> $DOTFILES_PATH/bin/backup >> $DOTFILES_PATH/bin/backup
