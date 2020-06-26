@@ -37,4 +37,3 @@ git commit -m "cest-ubuntu daily backup2" >> $DOTFILES_PATH/bin/backup
 git push -u origin master >> $DOTFILES_PATH/bin/backup
 
 echo "End $(date)" >> $DOTFILES_PATH/bin/backup >> $DOTFILES_PATH/bin/backup
-echo '\n'
