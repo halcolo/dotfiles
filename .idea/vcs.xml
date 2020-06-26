@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/dotly" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/dotly/modules/dotbot" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/dotly/modules/dotbot/lib/pyyaml" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/dotly/modules/z" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/dotly/modules/zimfw" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/dotly/modules/zimfw/modules/completion" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/dotly/modules/zimfw/modules/environment" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/dotly/modules/zimfw/modules/git-info" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/dotly/modules/zimfw/modules/history" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/dotly/modules/zimfw/modules/input" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/dotly/modules/zimfw/modules/zsh-autosuggestions" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/dotly/modules/zimfw/modules/zsh-syntax-highlighting" vcs="Git" />
+  </component>
+</project>
