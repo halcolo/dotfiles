@@ -5,12 +5,14 @@ set -euo pipefail
 source "$DOTFILES_PATH/scripts/core/_main.sh"
 
 ##? Export all installed packages
-#?? 1.3.1
+#?? 1.4.0
 ##?
 ##? Usage:
 ##?    export
 
 docs::eval "$@"
+
+echo "Begin $(date)" >> $DOTFILES_PATH/bin/backup
 
 if hash brew 2>/dev/null; then
         gdate "$@"
@@ -19,17 +21,19 @@ fi
 
 if hash apt 2>/dev/null; then
     apt list --installed > "$DOTFILES_PATH/langs/apt/apt-installed.txt" 
-    echo 'apt apps exported!'
+    echo 'apt apps exported!' >> $DOTFILES_PATH/bin/backup
 fi
 
 
 pip freeze >"$DOTFILES_PATH/langs/python/requirements.txt"
-echo 'Python apps exported!'
+echo 'Python apps exported!' >> $DOTFILES_PATH/bin/backup
 
-npm root -g | xargs -I_ ls -1 _ | grep -v npm >"$DOTFILES_PATH/langs/js/global_modules.txt"
-echo 'NPM apps exported!'
+npm root -g | xargs -I_ ls -1 _ | grep -v npm >"$DOTFILES_PATH/langs/js/global_modules.txt" >> $DOTFILES_PATH/bin/backup
+echo 'NPM apps exported!' >> $DOTFILES_PATH/bin/backup
 
-cd $DOTFILES_PATH
-git add .
-git commit -m "cest-ubuntu daily backup"
-git push -u origin master
+cd $DOTFILES_PATH >> $DOTFILES_PATH/bin/backup
+git add .  >> $DOTFILES_PATH/bin/backup
+git commit -m "cest-ubuntu daily backup" >> $DOTFILES_PATH/bin/backup
+git push -u origin master >> $DOTFILES_PATH/bin/backup
+echo "End $(date)" >> $DOTFILES_PATH/bin/backup >> $DOTFILES_PATH/bin/backup
+echo ""
