@@ -9,3 +9,7 @@ alias sudo='sudo '
 for aliasToSource in "$DOTFILES_PATH/shell/_aliases/"*; do source "$aliasToSource"; done
 for exportToSource in "$DOTFILES_PATH/shell/_exports/"*; do source "$exportToSource"; done
 for functionToSource in "$DOTFILES_PATH/shell/_functions/"*; do source "$functionToSource"; done
+
+# Symlinks
+rm $HOME/.gitconfig
+ln -s $DOTFILES_PATH/git/.gitconfig $HOME/.gitconfig

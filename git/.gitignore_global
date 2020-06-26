@@ -2,6 +2,7 @@
 .idea
 *.iml
 *.iws
+*.vscode
 .idea-compl
 *.sc
 
@@ -19,3 +20,6 @@ libsigar-universal64-macosx.dylib
 
 # Custom
 *.no-commit.*
+*.log.*
+*.zwc
+*.bak
