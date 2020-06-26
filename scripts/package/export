@@ -12,6 +12,7 @@ source "$DOTFILES_PATH/scripts/core/_main.sh"
 
 docs::eval "$@"
 
+echo '\n'
 echo "Begin $(date)" >> $DOTFILES_PATH/bin/backup
 
 if hash brew 2>/dev/null; then
