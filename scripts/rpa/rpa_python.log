@@ -1,0 +1,12 @@
+
+START - automation started - Fri Jun 26 2020 15:54:38 GMT-0700 (PDT)
+
+LIVE MODE - type done to quit
+ [RPA][STARTED]
+[RPA][0] - listening for inputs
+[RPA][1] - https://sanchezcarlosjr.com/login
+[RPA][1] - listening for inputs
+[RPA][2] - exist_result = exist('/html/body/app-root/ion-app/ion-router-outlet/app-login/ion-content/ion-grid/ion-row/ion-col/div[2]/form/div/div/ion-button[1]').toString()
+[RPA][2] - listening for inputs
+[RPA][3] - dump exist_result to rpa_python.txt
+[RPA][3] - listening for inputs
