@@ -34,6 +34,6 @@ echo 'NPM apps exported!' >> $DOTFILES_PATH/bin/backup
 cd $DOTFILES_PATH
 git add .  >> $DOTFILES_PATH/bin/backup >> $DOTFILES_PATH/bin/backup
 git commit -m "cest-ubuntu daily backup" >> $DOTFILES_PATH/bin/backup
-git push -u origin master >> $DOTFILES_PATH/bin/backup
+git push -u origin main >> $DOTFILES_PATH/bin/backup
 
 echo "End $(date)" >> $DOTFILES_PATH/bin/backup >> $DOTFILES_PATH/bin/backup
