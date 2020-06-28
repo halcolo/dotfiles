@@ -2,3 +2,7 @@ Begin vie 26 jun 2020 20:00:05 PDT
 apt apps exported!
 Python apps exported!
 NPM apps exported!
+[master 376910b] cest-ubuntu daily backup
+ 2 files changed, 16 insertions(+), 76 deletions(-)
+ rewrite bin/backup (96%)
+ create mode 100644 scripts/rpa/rpa_python.log
