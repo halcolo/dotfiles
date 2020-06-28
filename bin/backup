@@ -6,3 +6,7 @@ NPM apps exported!
  2 files changed, 16 insertions(+), 76 deletions(-)
  rewrite bin/backup (96%)
  create mode 100644 scripts/rpa/rpa_python.log
+Begin sáb 27 jun 2020 20:00:02 PDT
+apt apps exported!
+Python apps exported!
+NPM apps exported!
