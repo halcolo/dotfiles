@@ -72,4 +72,4 @@
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
 [credential]
-	helper = cache --timeout=3600
+	helper = store
