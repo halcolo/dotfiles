@@ -12,7 +12,7 @@ source "$DOTFILES_PATH/scripts/core/_main.sh"
 
 docs::eval "$@"
 
-echo "Begin $(date)" >> $DOTFILES_PATH/bin/backup
+echo "----- Begin $(date) ------" >> $DOTFILES_PATH/bin/backup
 
 if hash brew 2>/dev/null; then
         gdate "$@"
@@ -36,4 +36,4 @@ git add .  >> $DOTFILES_PATH/bin/backup >> $DOTFILES_PATH/bin/backup
 git commit -m "cest-ubuntu daily backup" >> $DOTFILES_PATH/bin/backup
 git push -u origin main >> $DOTFILES_PATH/bin/backup
 
-echo "End $(date)" >> $DOTFILES_PATH/bin/backup >> $DOTFILES_PATH/bin/backup
+echo "----- End $(date) -----" >> $DOTFILES_PATH/bin/backup >> $DOTFILES_PATH/bin/backup
