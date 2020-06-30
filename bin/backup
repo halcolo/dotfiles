@@ -1,20 +1,13 @@
-Begin vie 26 jun 2020 20:00:05 PDT
-apt apps exported!
-Python apps exported!
-NPM apps exported!
-[master 376910b] cest-ubuntu daily backup
- 2 files changed, 16 insertions(+), 76 deletions(-)
- rewrite bin/backup (96%)
- create mode 100644 scripts/rpa/rpa_python.log
-Begin sáb 27 jun 2020 20:00:02 PDT
-apt apps exported!
-Python apps exported!
-NPM apps exported!
-[main dd83998] cest-ubuntu daily backup
- 2 files changed, 4 insertions(+), 5 deletions(-)
-Branch 'main' set up to track remote branch 'main' from 'origin'.
-End sáb 27 jun 2020 20:00:21 PDT
 ----- Begin dom 28 jun 2020 20:00:01 PDT ------
+apt apps exported!
+Python apps exported!
+NPM apps exported!
+[main e62a0cd] cest-ubuntu daily backup
+ 3 files changed, 27 insertions(+), 2 deletions(-)
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+----- End dom 28 jun 2020 20:00:21 PDT -----
+
+----- Begin lun 29 jun 2020 20:00:02 PDT ------
 apt apps exported!
 Python apps exported!
 NPM apps exported!

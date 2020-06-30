@@ -1,11 +1,3 @@
-> 🚨🚨🚨 This repo is in development, use with caution!!! 🚨🚨🚨
-
-<p align="center">
-  <a href="http://codely.tv">
-    <img src="http://codely.tv/wp-content/uploads/2016/05/cropped-logo-codelyTV.png" width="192px" height="192px"/>
-  </a>
-</p>
-
 <h1 align="center">
   🐢  💨 dotly: An opinionated Zsh framework focused on dotfiles
 </h1>
