@@ -11,12 +11,12 @@
 
 Using curl
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/CodelyTV/dotly/master/installer)
+bash <(curl -s https://raw.githubusercontent.com/sanchezcarlosjr/dotfiles/main/scripts/self/install)
 ```
 
 Using wget
 ```bash
-wget -O - https://raw.githubusercontent.com/CodelyTV/dotly/master/installer | bash
+wget -O - https://raw.githubusercontent.com/sanchezcarlosjr/dotfiles/main/scripts/self/install | bash
 ```
 
 
