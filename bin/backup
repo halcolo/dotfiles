@@ -30,3 +30,17 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 apt apps exported!
 Python apps exported!
 NPM apps exported!
+[main 850b887] cest-ubuntu daily backup
+ 9 files changed, 85 insertions(+), 28 deletions(-)
+ create mode 100644 editors/intellij/.idea.swo
+ create mode 100644 editors/intellij/.idea.swp
+ create mode 100755 editors/intellij/clion
+ create mode 100755 editors/intellij/idea
+ create mode 100755 editors/intellij/pycharm
+ create mode 100755 editors/intellij/webstorm
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+----- End mié 01 jul 2020 20:00:27 PDT -----
+----- Begin jue 02 jul 2020 20:00:02 PDT ------
+apt apps exported!
+Python apps exported!
+NPM apps exported!
