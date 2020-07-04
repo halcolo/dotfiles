@@ -6,3 +6,8 @@ r.url('http://precalificaciones.infonavit.org.mx/Precalificacion/precalif.xhtml?
 r.type('//*[@id="precalif:nssTitular"]', '0');
 r.type('//*[@id="precalif:fechaTitular"]', sys.argv[2]);
 r.type('//*[@id="precalif:nssTitular"]',  sys.argv[1] );
+r.type(self.CURP_INPUT, self.curp)
+captcha = r.ask()
+r.type("", captcha)
+r.click("")
+r.wait(5)

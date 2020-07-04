@@ -44,3 +44,12 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 apt apps exported!
 Python apps exported!
 NPM apps exported!
+[main 16c72ce] cest-ubuntu daily backup
+ 8 files changed, 130 insertions(+), 106 deletions(-)
+ delete mode 100644 editors/intellij/.idea.swp
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+----- End jue 02 jul 2020 20:00:19 PDT -----
+----- Begin vie 03 jul 2020 20:00:02 PDT ------
+apt apps exported!
+Python apps exported!
+NPM apps exported!
