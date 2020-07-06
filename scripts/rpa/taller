@@ -2,34 +2,157 @@
 import rpa as userInterface
 import sys
 
-class IntefaceInfonavitWorkshop:
-   URL = 'http://tallerlinea.infonavit.org.mx/wps/Taller/'
-   NSS_INPUT = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[1]/td[2]/input'
-   BIRTHDAY_INPUT = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[1]/select'
-   BIRTH_MONTH_INPUT = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[2]/select'
-   BIRTH_YEAR_INPUT = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[3]/select'
-   FIRST_BUTTON_CALLED_SEND = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr/td[1]/button'
+class InterfaceInfonavitWorkshop:
+    URL = 'http://tallerlinea.infonavit.org.mx/wps/Taller/'
+    NSS_INPUT = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[1]/td[2]/input'
+    BIRTHDAY_INPUT = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[1]/select'
+    BIRTH_MONTH_INPUT = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[2]/select'
+    BIRTH_YEAR_INPUT = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[3]/select'
+    FIRST_BUTTON_CALLED_SEND = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr/td[1]/button'
+    CONFIRM_DATA_BUTTON = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[6]/td/table/tbody/tr/td/button'
+    OPEN_POPUP = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr[3]/td/button'
+    NEXT_BUTTON = '/html/body/form/div/div[1]/div[3]/div[2]/img[2]'
+    CONTINUE_BUTTON = '/html/body/div[1]/div/div[4]/a/img'
+
 
 class InfonavitWorkshopSolver:
-  def __init__(self, nss, birthday, birthMonth, birthYear):
-    self.nss = nss
-    self.birthday = birthday if len(birthday) == 2  else '0'+birthday
-    self.birthMonth = birthMonth if len(birthMonth) == 2  else '0'+birthMonth
-    self.birthYear = birthYear
+    def __init__(self, nss, birthday, birthMonth, birthYear):
+        self.nss = nss
+        self.birthday = birthday if len(birthday) == 2 else '0'+birthday
+        self.birthMonth = birthMonth if len(birthMonth) == 2 else '0'+birthMonth
+        self.birthYear = birthYear
    
-  def solve(self):
-    userInterface.init(visual_automation = True);
-    userInterface.url(IntefaceInfonavitWorkshop.URL);
-    userInterface.type(IntefaceInfonavitWorkshop.NSS_INPUT, self.nss);
-    userInterface.select(IntefaceInfonavitWorkshop.BIRTHDAY_INPUT,self.birthday);
-    userInterface.select(IntefaceInfonavitWorkshop.BIRTH_MONTH_INPUT, self.birthMonth);
-    userInterface.select(IntefaceInfonavitWorkshop.BIRTH_YEAR_INPUT, self.birthYear);
-    userInterface.click(IntefaceInfonavitWorkshop.FIRST_BUTTON_CALLED_SEND);
-    
+    def solve(self):
+        userInterface.init(visual_automation=True)
+        userInterface.timeout(1)
+        userInterface.url(InterfaceInfonavitWorkshop.URL)
+        userInterface.type(InterfaceInfonavitWorkshop.NSS_INPUT, self.nss)
+        userInterface.select(InterfaceInfonavitWorkshop.BIRTHDAY_INPUT, self.birthday)
+        userInterface.select(InterfaceInfonavitWorkshop.BIRTH_MONTH_INPUT, self.birthMonth)
+        userInterface.select(InterfaceInfonavitWorkshop.BIRTH_YEAR_INPUT, self.birthYear)
+        userInterface.click(InterfaceInfonavitWorkshop.FIRST_BUTTON_CALLED_SEND)
+        userInterface.click(InterfaceInfonavitWorkshop.CONFIRM_DATA_BUTTON)
+        userInterface.click(InterfaceInfonavitWorkshop.OPEN_POPUP)
+        userInterface.wait(1)
+        userInterface.popup('http://tallerlinea.infonavit.org.mx/wps/TallerWeb/home/menu.do')
+        userInterface.click(InterfaceInfonavitWorkshop.CONTINUE_BUTTON)
+        for i in range(0, 10):
+            userInterface.click('//*[@id="cierto"]')
+        userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click(InterfaceInfonavitWorkshop.CONTINUE_BUTTON)
+        for i in range(0, 6):
+            userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click(InterfaceInfonavitWorkshop.CONTINUE_BUTTON)
+        for i in range(0, 2):
+            userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click(InterfaceInfonavitWorkshop.CONTINUE_BUTTON)
+        for i in range(0, 3):
+            userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click('//*[@id="iniciarCalculo"]')
+        userInterface.type('//*[@id="salario"]', '1')
+        userInterface.type('//*[@id="renta"]', '1')
+        userInterface.click('/html/body/form/div/div[2]/div/div[3]/a')
+        userInterface.click('/html/body/form/div/div[2]/div/span[1]/a')
+        userInterface.click('/html/body/form/div/div[2]/div[2]/span[4]')
+        userInterface.click('/html/body/form/div/div[2]/div[3]/div[2]/a')
+        userInterface.click(InterfaceInfonavitWorkshop.CONTINUE_BUTTON)
+        for i in range(0, 7):
+            userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click(InterfaceInfonavitWorkshop.CONTINUE_BUTTON)
+        userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click('//*[@id="alert1"]')
+        userInterface.click('//*[@id="alert2"]')
+        userInterface.click('//*[@id="alert3"]')
+        userInterface.click('//*[@id="alert4"]')
+        userInterface.click('//*[@id="alert5"]')
+        userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click('//*[@id="alert1"]')
+        userInterface.click('//*[@id="alert2"]')
+        userInterface.click('//*[@id="alert3"]')
+        userInterface.click('//*[@id="alert4"]')
+        userInterface.click('//*[@id="alert5"]')
+        userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click('//*[@id="alert1"]')
+        userInterface.click('//*[@id="alert2"]')
+        userInterface.click('//*[@id="alert3"]')
+        userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click('//*[@id="alert1"]')
+        userInterface.click('//*[@id="alert2"]')
+        userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click(InterfaceInfonavitWorkshop.CONTINUE_BUTTON)
+        userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.type('//*[@id="nombre"]', 'A')
+        userInterface.type('//*[@id="nombre"]', '1')
+        userInterface.click('//*[@id="ubicacion"]')
+        userInterface.hover('/html/body/form/div/div[2]/div[4]/div[1]/span[1]')
+        userInterface.mouse('down')
+        userInterface.hover('/html/body/form/div/div[2]/div[4]/div[2]')
+        userInterface.mouse('up')
+        userInterface.click('/html/body/form/div/div[2]/div[4]/div[4]/a')
+        userInterface.click('//*[@id="1"]')
+        userInterface.type('//*[@id="metros"]', '1')
+        userInterface.click('//*[@id="2"]')
+        userInterface.click('/html/body/form/div/div[2]/div[4]/div[6]/div[2]/input[1]')
+        userInterface.click('//*[@id="3"]')
+        userInterface.click('/html/body/form/div/div[2]/div[4]/div[6]/div[2]/input[1]')
+        userInterface.click('//*[@id="4"]')
+        userInterface.click('/html/body/form/div/div[2]/div[4]/div[6]/div[2]/input[1]')
+        userInterface.click('//*[@id="5]')
+        userInterface.click('/html/body/form/div/div[2]/div[4]/div[6]/div[2]/input[1]')
+        userInterface.click('//*[@id="6]')
+        userInterface.click('/html/body/form/div/div[2]/div[4]/div[6]/div[2]/input[1]')
+        userInterface.click('//*[@id="7]')
+        userInterface.click('/html/body/form/div/div[2]/div[4]/div[6]/div[2]/input[1]')
+        userInterface.click('//*[@id="8]')
+        userInterface.click('/html/body/form/div/div[2]/div[4]/div[6]/div[2]/input[1]')
+        userInterface.click('//*[@id="9]')
+        userInterface.click('/html/body/form/div/div[2]/div[4]/div[6]/div[2]/input[1]')
+        userInterface.click('//*[@id="10]')
+        userInterface.click('/html/body/form/div/div[2]/div[4]/div[6]/div[2]/input[1]')
+        userInterface.click('//*[@id="12]')
+        userInterface.click('/html/body/form/div/div[2]/div[4]/div[6]/div[2]/input[1]')
+        userInterface.click('//*[@id="13]')
+        userInterface.click('/html/body/form/div/div[2]/div[4]/div[6]/div[2]/input[1]')
+        userInterface.click('//*[@id="14]')
+        userInterface.click('/html/body/form/div/div[2]/div[4]/div[6]/div[2]/input[1]')
+        userInterface.click('/html/body/form/div/div[2]/div[4]/div[4]/a')
+        userInterface.click('/html/body/form/div/div[2]/div[8]/a/img')
+        userInterface.click('/html/body/form/div/div[1]/div[3]/div[2]/img[2]')
+        userInterface.click(InterfaceInfonavitWorkshop.CONTINUE_BUTTON)
+        userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click('/html/body/form/div/div[2]/div[2]/div/a')
+        userInterface.click('//*[@id="1"]')
+        userInterface.click('//*[@id="2"]')
+        userInterface.click('//*[@id="1"]')
+        userInterface.click('//*[@id="2"]')
+        userInterface.click('//*[@id="1"]')
+        userInterface.click('//*[@id="2"]')
+        userInterface.click('//*[@id="1"]')
+        userInterface.click('//*[@id="2"]')
+        userInterface.click('//*[@id="1"]')
+        userInterface.click('//*[@id="2"]')
+        userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click(InterfaceInfonavitWorkshop.CONTINUE_BUTTON)
+        userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.click('/html/body/div[1]/div/div[2]/img')
+        userInterface.click('/html/body/form/div/div[2]/div[3]/a/img')
+        for i in range(0, 22):
+            userInterface.click('//*[@id="opcion1"]')
+            userInterface.click('/html/body/form/div/div[2]/div[7]/a/img')
+        userInterface.click('/html/body/form/div/div[2]/div[5]/a/img')
+        userInterface.click('/html/body/form/div/div[1]/div[2]/a')
+
+
 infonavitWorkshopSolver = InfonavitWorkshopSolver(
     nss=sys.argv[1],
     birthday=sys.argv[2],
     birthMonth=sys.argv[3],
     birthYear=sys.argv[4]
-);
+)
+
 infonavitWorkshopSolver.solve()
