@@ -69,3 +69,13 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 apt apps exported!
 Python apps exported!
 NPM apps exported!
+[main f69bf29] cest-ubuntu daily backup
+ 8 files changed, 171 insertions(+), 65 deletions(-)
+ delete mode 100644 scripts/rpa/rpa_python.log
+ rewrite scripts/rpa/taller (83%)
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+----- End dom 05 jul 2020 20:00:25 PDT -----
+----- Begin lun 06 jul 2020 20:00:01 PDT ------
+apt apps exported!
+Python apps exported!
+NPM apps exported!
