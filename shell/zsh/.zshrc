@@ -31,3 +31,9 @@ autoload -Uz promptinit && promptinit
 prompt codelytv
 
 source $DOTFILES_PATH/shell/zsh/key-bindings.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/cest/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/cest/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/cest/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/cest/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
