@@ -115,3 +115,14 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 apt apps exported!
 Python apps exported!
 NPM apps exported!
+[main c9ba5cc] cest-ubuntu daily backup
+ 13 files changed, 57 insertions(+), 7 deletions(-)
+ create mode 100755 editors/intellij/goland
+ create mode 100644 shell/_aliases/dir.sh.save
+ delete mode 100644 shell/bash/.gitkeep
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+----- End vie 10 jul 2020 20:00:31 PDT -----
+----- Begin sáb 11 jul 2020 20:00:01 PDT ------
+apt apps exported!
+Python apps exported!
+NPM apps exported!
