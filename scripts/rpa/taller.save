@@ -21,33 +21,24 @@ class InfonavitWorkshopSolver:
         self.birthday = birthday if len(birthday) == 2 else '0'+birthday
         self.birthMonth = birthMonth if len(birthMonth) == 2 else '0'+birthMonth
         self.birthYear = birthYear
-
+   
     def solve(self):
         userInterface.init(visual_automation=True)
+        userInterface.timeout(1)
         userInterface.url(InterfaceInfonavitWorkshop.URL)
         userInterface.type(InterfaceInfonavitWorkshop.NSS_INPUT, self.nss)
         userInterface.select(InterfaceInfonavitWorkshop.BIRTHDAY_INPUT, self.birthday)
         userInterface.select(InterfaceInfonavitWorkshop.BIRTH_MONTH_INPUT, self.birthMonth)
         userInterface.select(InterfaceInfonavitWorkshop.BIRTH_YEAR_INPUT, self.birthYear)
         userInterface.click(InterfaceInfonavitWorkshop.FIRST_BUTTON_CALLED_SEND)
-        if(userInterface.exist('//*[@id="gwt-uid-42"]')):
-            userInterface.click('//*[@id="gwt-uid-42"]')
-            userInterface.click('//*[@id="gwt-uid-45"]')
-            userInterface.type('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/div/table/tbody/tr[6]/td/table/tbody/tr[1]/td/table/tbody/tr/td[2]/input', '22250')
-            userInterface.select('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/div/table/tbody/tr[7]/td/table/tbody/tr[1]/td/table/tbody/tr/td[2]/select', '3002')
-            userInterface.select('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/div/table/tbody/tr[8]/td/table/tbody/tr[1]/td/table/tbody/tr/td[2]/select', '30023002')
-            userInterface.type('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[3]/td/div/table/tbody/tr[4]/td/table/tbody/tr[1]/td/table/tbody/tr/td[2]/input', 'a@gmail.com')
-            userInterface.type('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[3]/td/div/table/tbody/tr[5]/td/table/tbody/tr[1]/td/table/tbody/tr/td[2]/input', '6461924594')
-            userInterface.select('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[5]/td/div/table/tbody/tr[2]/td/table/tbody/tr[1]/td/table/tbody/tr/td[2]/select', '2')
-            userInterface.select('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[5]/td/div/table/tbody/tr[3]/td/table/tbody/tr[1]/td/table/tbody/tr/td[2]/select', '1')
-            userInterface.click(InterfaceInfonavitWorkshop.CONFIRM_DATA_BUTTON)
+	userInterface.type('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/div/table/tbody/tr[6]/td/table/tbody/tr[1]/td/table/tbody/tr/td[2]/input'
+        userInterface.click(InterfaceInfonavitWorkshop.CONFIRM_DATA_BUTTON)
         userInterface.click(InterfaceInfonavitWorkshop.OPEN_POPUP)
         userInterface.wait(1)
         userInterface.popup('http://tallerlinea.infonavit.org.mx/wps/TallerWeb/home/menu.do')
         userInterface.click(InterfaceInfonavitWorkshop.CONTINUE_BUTTON)
-        if(userInterface.exist('//*[@id="cierto"]')):
-           for i in range(0, 10):
-               userInterface.click('//*[@id="cierto"]')
+        for i in range(0, 10):
+            userInterface.click('//*[@id="cierto"]')
         userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
         userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
         userInterface.click(InterfaceInfonavitWorkshop.CONTINUE_BUTTON)
@@ -81,19 +72,20 @@ class InfonavitWorkshopSolver:
         userInterface.click('//*[@id="alert2"]')
         userInterface.click('//*[@id="alert3"]')
         userInterface.click('//*[@id="alert4"]')
+        userInterface.click('//*[@id="alert5"]')
         userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
         userInterface.click('//*[@id="alert1"]')
         userInterface.click('//*[@id="alert2"]')
         userInterface.click('//*[@id="alert3"]')
         userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
         userInterface.click('//*[@id="alert1"]')
-        userInterface.click('//*[@id="alert3"]')
+        userInterface.click('//*[@id="alert2"]')
         userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
         userInterface.click(InterfaceInfonavitWorkshop.CONTINUE_BUTTON)
         userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
         userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
         userInterface.type('//*[@id="nombre"]', 'A')
-        userInterface.type('//*[@id="precio"]', '1')
+        userInterface.type('//*[@id="nombre"]', '1')
         userInterface.click('//*[@id="ubicacion"]')
         userInterface.hover('/html/body/form/div/div[2]/div[4]/div[1]/span[1]')
         userInterface.mouse('down')
