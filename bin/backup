@@ -142,3 +142,22 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 apt apps exported!
 Python apps exported!
 NPM apps exported!
+[main 01f190d] cest-ubuntu daily backup
+ 19 files changed, 2747 insertions(+), 138 deletions(-)
+ create mode 100644 rpa_python.log
+ create mode 100644 scripts/package/rpa_python
+ create mode 100644 scripts/package/rpa_python.log
+ create mode 100644 scripts/package/tagui_local.js
+ create mode 100644 scripts/rpa/rpa_python
+ create mode 100644 scripts/rpa/rpa_python.js
+ create mode 100644 scripts/rpa/rpa_python.log
+ create mode 100644 scripts/rpa/rpa_python.raw
+ create mode 100644 scripts/rpa/tagui_local.js
+ create mode 100755 scripts/rpa/taller.save
+ create mode 100755 scripts/rpa/taller.save.1
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+----- End lun 13 jul 2020 20:00:26 PDT -----
+----- Begin mar 14 jul 2020 20:00:01 PDT ------
+apt apps exported!
+Python apps exported!
+NPM apps exported!
