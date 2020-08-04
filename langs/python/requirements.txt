@@ -65,6 +65,7 @@ opencv-python==4.2.0.34
 opt-einsum==3.2.1
 packaging==20.4
 paramiko==2.7.1
+-e git+https://github.com/facebookresearch/ParlAI.git@becb980b21ab3e33f963ff6ae0fba1d2921eef85#egg=parlai
 patch-ng==1.17.4
 pbr==5.4.5
 pexpect==4.8.0
@@ -116,6 +117,7 @@ tensorflow-estimator==2.2.0
 termcolor==1.1.0
 testresources==2.0.1
 tqdm==4.47.0
+typing-extensions==3.7.4.2
 ubuntu-advantage-tools==20.3
 ubuntu-drivers-common==0.0.0
 ufw==0.36
@@ -125,6 +127,8 @@ urllib3==1.25.9
 usb-creator==0.3.7
 vboxapi==1.0
 wadllib==1.3.4
+websocket-client==0.57.0
+websocket-server==0.4
 Werkzeug==1.0.1
 wrapt==1.12.1
 xkit==0.0.0
