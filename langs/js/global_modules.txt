@@ -1,5 +1,6 @@
 @angular
 firebase-tools
+@ionic
 jest
 prettier
 tsconfig-paths
