@@ -1,5 +1,6 @@
 @angular
 firebase-tools
+http-server
 @ionic
 jest
 prettier
