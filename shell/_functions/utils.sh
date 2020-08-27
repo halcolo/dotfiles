@@ -9,3 +9,7 @@ function tcr() {
   # Information and instructions for trying TCR workflow
   npm test && git commit -am "$1" || git reset --hard
 }
+
+function cdc() {
+  cd ~/projects; cd $1;
+}
