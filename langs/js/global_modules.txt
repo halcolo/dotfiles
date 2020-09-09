@@ -7,3 +7,4 @@ prettier
 tsconfig-paths
 tscpaths
 typescript
+yarn
