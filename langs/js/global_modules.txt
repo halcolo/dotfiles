@@ -1,5 +1,6 @@
 @angular
 firebase-tools
+github-files-fetcher
 http-server
 @ionic
 jest
