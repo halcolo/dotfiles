@@ -5,6 +5,7 @@ http-server
 @ionic
 jest
 prettier
+serverless
 tsconfig-paths
 tscpaths
 typescript
