@@ -890,3 +890,11 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 apt apps exported!
 Python apps exported!
 NPM apps exported!
+[main fe0b33c] cest-ubuntu daily backup
+ 7 files changed, 34 insertions(+), 21 deletions(-)
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+----- End mié 14 oct 2020 20:00:47 PDT -----
+----- Begin jue 15 oct 2020 20:00:02 PDT ------
+apt apps exported!
+Python apps exported!
+NPM apps exported!
