@@ -1098,3 +1098,11 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 apt apps exported!
 Python apps exported!
 NPM apps exported!
+[main ea2c9e1] cest-ubuntu daily backup
+ 7 files changed, 20 insertions(+), 12 deletions(-)
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+----- End mar 10 nov 2020 20:00:29 PST -----
+----- Begin mié 11 nov 2020 20:00:02 PST ------
+apt apps exported!
+Python apps exported!
+NPM apps exported!
