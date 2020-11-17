@@ -18,7 +18,7 @@ colour==0.1.5
 command-not-found==0.3
 conan==1.27.0
 configobj==5.0.6
-cryptography==2.9.2
+cryptography==3.2
 cupshelpers==1.0
 dbus-python==1.2.16
 defer==1.0.6
