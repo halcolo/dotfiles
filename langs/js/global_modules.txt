@@ -9,4 +9,5 @@ serverless
 tsconfig-paths
 tscpaths
 typescript
+vue-generate-component
 yarn
