@@ -1297,3 +1297,12 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 apt apps exported!
 Python apps exported!
 NPM apps exported!
+[main f8270ad] cest-ubuntu daily backup
+ 8 files changed, 19 insertions(+), 5 deletions(-)
+ create mode 100755 editors/intellij/phpstorm
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+----- End dom 06 dic 2020 20:01:01 PST -----
+----- Begin lun 07 dic 2020 20:00:01 PST ------
+apt apps exported!
+Python apps exported!
+NPM apps exported!
