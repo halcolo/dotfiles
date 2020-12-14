@@ -1,5 +1,5 @@
 
-START - automation started - Mon Nov 16 2020 10:46:32 GMT-0800 (PST)
+START - automation started - Sun Dec 13 2020 15:19:43 GMT-0800 (PST)
 
 LIVE MODE - type done to quit
  [RPA][STARTED]
@@ -10,25 +10,25 @@ LIVE MODE - type done to quit
 [RPA][2] - listening for inputs
 [RPA][3] - dump exist_result to rpa_python.txt
 [RPA][3] - listening for inputs
-[RPA][4] - type /html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[1]/td[2]/input as 21078963481
+[RPA][4] - type /html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[1]/td[2]/input as 21048558601
 [RPA][4] - listening for inputs
 [RPA][5] - exist_result = exist('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[1]/select').toString()
 [RPA][5] - listening for inputs
 [RPA][6] - dump exist_result to rpa_python.txt
 [RPA][6] - listening for inputs
-[RPA][7] - select /html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[1]/select as 25
+[RPA][7] - select /html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[1]/select as 24
 [RPA][7] - listening for inputs
 [RPA][8] - exist_result = exist('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[2]/select').toString()
 [RPA][8] - listening for inputs
 [RPA][9] - dump exist_result to rpa_python.txt
 [RPA][9] - listening for inputs
-[RPA][10] - select /html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[2]/select as 01
+[RPA][10] - select /html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[2]/select as 11
 [RPA][10] - listening for inputs
 [RPA][11] - exist_result = exist('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[3]/select').toString()
 [RPA][11] - listening for inputs
 [RPA][12] - dump exist_result to rpa_python.txt
 [RPA][12] - listening for inputs
-[RPA][13] - select /html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[3]/select as 1989
+[RPA][13] - select /html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[3]/select as 1985
 [RPA][13] - listening for inputs
 [RPA][14] - exist_result = exist('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr/td[1]/button').toString()
 [RPA][14] - listening for inputs
@@ -104,136 +104,102 @@ LIVE MODE - type done to quit
 [RPA][49] - listening for inputs
 [RPA][50] - dump exist_result to rpa_python.txt
 [RPA][50] - listening for inputs
-[RPA][51] - click /html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr[3]/td/button
+[RPA][51] - js if (chrome_targetid !== "") {found_targetid = chrome_targetid; chrome_targetid = ""; chrome_step("Target.detachFromTarget", {sessionId: found_targetid});}
 [RPA][51] - listening for inputs
-[RPA][52] - js if (chrome_targetid !== "") {found_targetid = chrome_targetid; chrome_targetid = ""; chrome_step("Target.detachFromTarget", {sessionId: found_targetid});}
+[RPA][52] - js found_targetid = ""; chrome_targets = []; ws_message = chrome_step("Target.getTargets", {});
 [RPA][52] - listening for inputs
-[RPA][53] - js found_targetid = ""; chrome_targets = []; ws_message = chrome_step("Target.getTargets", {});
+[RPA][53] - js try {ws_json = JSON.parse(ws_message); if (ws_json.result.targetInfos) chrome_targets = ws_json.result.targetInfos; else chrome_targets = [];} catch (e) {chrome_targets = [];}
 [RPA][53] - listening for inputs
-[RPA][54] - js try {ws_json = JSON.parse(ws_message); if (ws_json.result.targetInfos) chrome_targets = ws_json.result.targetInfos; else chrome_targets = [];} catch (e) {chrome_targets = [];}
+[RPA][54] - js chrome_targets.forEach(function(target) {if (target.url.indexOf("http://tallerlinea.infonavit.org.mx/wps/TallerWeb/home/menu.do") !== -1) found_targetid = target.targetId;})
 [RPA][54] - listening for inputs
-[RPA][55] - js chrome_targets.forEach(function(target) {if (target.url.indexOf("http://tallerlinea.infonavit.org.mx/wps/TallerWeb/home/menu.do") !== -1) found_targetid = target.targetId;})
+[RPA][55] - js if (found_targetid !== "") {ws_message = chrome_step("Target.attachToTarget", {targetId: found_targetid}); try {ws_json = JSON.parse(ws_message); if (ws_json.result.sessionId !== "") found_targetid = ws_json.result.sessionId; else found_targetid = "";} catch (e) {found_targetid = "";}}
 [RPA][55] - listening for inputs
-[RPA][56] - js if (found_targetid !== "") {ws_message = chrome_step("Target.attachToTarget", {targetId: found_targetid}); try {ws_json = JSON.parse(ws_message); if (ws_json.result.sessionId !== "") found_targetid = ws_json.result.sessionId; else found_targetid = "";} catch (e) {found_targetid = "";}}
+[RPA][56] - js chrome_targetid = found_targetid
 [RPA][56] - listening for inputs
-[RPA][57] - js chrome_targetid = found_targetid
+[RPA][57] - dump chrome_targetid to rpa_python.txt
 [RPA][57] - listening for inputs
-[RPA][58] - dump chrome_targetid to rpa_python.txt
+[RPA][58] - exist_result = exist('/html/body/div[1]/div/div[4]/a/img').toString()
 [RPA][58] - listening for inputs
-[RPA][59] - exist_result = exist('/html/body/div[1]/div/div[4]/a/img').toString()
+[RPA][59] - dump exist_result to rpa_python.txt
 [RPA][59] - listening for inputs
-[RPA][60] - dump exist_result to rpa_python.txt
+[RPA][60] - exist_result = exist('//*[@id="cierto"]').toString()
 [RPA][60] - listening for inputs
-[RPA][61] - exist_result = exist('//*[@id="cierto"]').toString()
+[RPA][61] - dump exist_result to rpa_python.txt
 [RPA][61] - listening for inputs
-[RPA][62] - dump exist_result to rpa_python.txt
+[RPA][62] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
 [RPA][62] - listening for inputs
-[RPA][63] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
+[RPA][63] - dump exist_result to rpa_python.txt
 [RPA][63] - listening for inputs
-[RPA][64] - dump exist_result to rpa_python.txt
+[RPA][64] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
 [RPA][64] - listening for inputs
-[RPA][65] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
+[RPA][65] - dump exist_result to rpa_python.txt
 [RPA][65] - listening for inputs
-[RPA][66] - dump exist_result to rpa_python.txt
+[RPA][66] - exist_result = exist('/html/body/div[1]/div/div[4]/a/img').toString()
 [RPA][66] - listening for inputs
-[RPA][67] - exist_result = exist('/html/body/div[1]/div/div[4]/a/img').toString()
+[RPA][67] - dump exist_result to rpa_python.txt
 [RPA][67] - listening for inputs
-[RPA][68] - dump exist_result to rpa_python.txt
+[RPA][68] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
 [RPA][68] - listening for inputs
-[RPA][69] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
+[RPA][69] - dump exist_result to rpa_python.txt
 [RPA][69] - listening for inputs
-[RPA][70] - dump exist_result to rpa_python.txt
+[RPA][70] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
 [RPA][70] - listening for inputs
-[RPA][71] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
+[RPA][71] - dump exist_result to rpa_python.txt
 [RPA][71] - listening for inputs
-[RPA][72] - dump exist_result to rpa_python.txt
+[RPA][72] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
 [RPA][72] - listening for inputs
-[RPA][73] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
+[RPA][73] - dump exist_result to rpa_python.txt
 [RPA][73] - listening for inputs
-[RPA][74] - dump exist_result to rpa_python.txt
+[RPA][74] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
 [RPA][74] - listening for inputs
-[RPA][75] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
+[RPA][75] - dump exist_result to rpa_python.txt
 [RPA][75] - listening for inputs
-[RPA][76] - dump exist_result to rpa_python.txt
+[RPA][76] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
 [RPA][76] - listening for inputs
-[RPA][77] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
+[RPA][77] - dump exist_result to rpa_python.txt
 [RPA][77] - listening for inputs
-[RPA][78] - dump exist_result to rpa_python.txt
+[RPA][78] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
 [RPA][78] - listening for inputs
-[RPA][79] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
+[RPA][79] - dump exist_result to rpa_python.txt
 [RPA][79] - listening for inputs
-[RPA][80] - dump exist_result to rpa_python.txt
+[RPA][80] - exist_result = exist('/html/body/div[1]/div/div[4]/a/img').toString()
 [RPA][80] - listening for inputs
-[RPA][81] - exist_result = exist('/html/body/div[1]/div/div[4]/a/img').toString()
+[RPA][81] - dump exist_result to rpa_python.txt
 [RPA][81] - listening for inputs
-[RPA][82] - dump exist_result to rpa_python.txt
+[RPA][82] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
 [RPA][82] - listening for inputs
-[RPA][83] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
+[RPA][83] - dump exist_result to rpa_python.txt
 [RPA][83] - listening for inputs
-[RPA][84] - dump exist_result to rpa_python.txt
+[RPA][84] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
 [RPA][84] - listening for inputs
-[RPA][85] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
+[RPA][85] - dump exist_result to rpa_python.txt
 [RPA][85] - listening for inputs
-[RPA][86] - dump exist_result to rpa_python.txt
+[RPA][86] - exist_result = exist('/html/body/div[1]/div/div[4]/a/img').toString()
 [RPA][86] - listening for inputs
-[RPA][87] - exist_result = exist('/html/body/div[1]/div/div[4]/a/img').toString()
+[RPA][87] - dump exist_result to rpa_python.txt
 [RPA][87] - listening for inputs
-[RPA][88] - dump exist_result to rpa_python.txt
+[RPA][88] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
 [RPA][88] - listening for inputs
-[RPA][89] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
+[RPA][89] - dump exist_result to rpa_python.txt
 [RPA][89] - listening for inputs
-[RPA][90] - dump exist_result to rpa_python.txt
+[RPA][90] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
 [RPA][90] - listening for inputs
-[RPA][91] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
+[RPA][91] - dump exist_result to rpa_python.txt
 [RPA][91] - listening for inputs
-[RPA][92] - dump exist_result to rpa_python.txt
+[RPA][92] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
 [RPA][92] - listening for inputs
-[RPA][93] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
+[RPA][93] - dump exist_result to rpa_python.txt
 [RPA][93] - listening for inputs
-[RPA][94] - dump exist_result to rpa_python.txt
+[RPA][94] - exist_result = exist('//*[@id="iniciarCalculo"]').toString()
 [RPA][94] - listening for inputs
-[RPA][95] - exist_result = exist('//*[@id="iniciarCalculo"]').toString()
+[RPA][95] - dump exist_result to rpa_python.txt
 [RPA][95] - listening for inputs
-[RPA][96] - dump exist_result to rpa_python.txt
+[RPA][96] - exist_result = exist('//*[@id="salario"]').toString()
 [RPA][96] - listening for inputs
-[RPA][97] - exist_result = exist('//*[@id="salario"]').toString()
+[RPA][97] - dump exist_result to rpa_python.txt
 [RPA][97] - listening for inputs
-[RPA][98] - dump exist_result to rpa_python.txt
+[RPA][98] - exist_result = exist('//*[@id="renta"]').toString()
 [RPA][98] - listening for inputs
-[RPA][99] - exist_result = exist('//*[@id="renta"]').toString()
+[RPA][99] - dump exist_result to rpa_python.txt
 [RPA][99] - listening for inputs
-[RPA][100] - dump exist_result to rpa_python.txt
-[RPA][100] - listening for inputs
-[RPA][101] - exist_result = exist('/html/body/form/div/div[2]/div/div[3]/a').toString()
-[RPA][101] - listening for inputs
-[RPA][102] - dump exist_result to rpa_python.txt
-[RPA][102] - listening for inputs
-[RPA][103] - exist_result = exist('/html/body/form/div/div[2]/div/span[1]/a').toString()
-[RPA][103] - listening for inputs
-[RPA][104] - dump exist_result to rpa_python.txt
-[RPA][104] - listening for inputs
-[RPA][105] - exist_result = exist('/html/body/form/div/div[2]/div[2]/span[4]').toString()
-[RPA][105] - listening for inputs
-[RPA][106] - dump exist_result to rpa_python.txt
-[RPA][106] - listening for inputs
-[RPA][107] - exist_result = exist('/html/body/form/div/div[2]/div[3]/div[2]/a').toString()
-[RPA][107] - listening for inputs
-[RPA][108] - dump exist_result to rpa_python.txt
-[RPA][108] - listening for inputs
-[RPA][109] - exist_result = exist('/html/body/div[1]/div/div[4]/a/img').toString()
-[RPA][109] - listening for inputs
-[RPA][110] - dump exist_result to rpa_python.txt
-[RPA][110] - listening for inputs
-[RPA][111] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
-[RPA][111] - listening for inputs
-[RPA][112] - dump exist_result to rpa_python.txt
-[RPA][112] - listening for inputs
-[RPA][113] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
-[RPA][113] - listening for inputs
-[RPA][114] - dump exist_result to rpa_python.txt
-[RPA][114] - listening for inputs
-[RPA][115] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
-[RPA][115] - listening for inputs
-[RPA][116] - dump exist_result to rpa_python.txt
-[RPA][116] - listening for inputs
-[RPA][117] - exist_result = exist('/html/body/form/div/div[1]/div[3]/div[2]/img[2]').toString()
+[RPA][100] - exist_result = exist('/html/body/form/div/div[2]/div/div[3]/a').toString()

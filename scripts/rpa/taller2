@@ -1,0 +1,55 @@
+#!/usr/bin/env python
+import rpa as userInterface
+import sys
+
+def dragdrop(element_identifier, x_offset, y_offset):
+    userInterface.hover(element_identifier)
+    userInterface.mouse('down')
+    userInterface.hover(userInterface.mouse_x() + x_offset, userInterface.mouse_y() + userInterface_offset)
+    userInterface.mouse('up')
+
+class InterfaceInfonavitWorkshop:
+    URL = 'http://tallerlinea.infonavit.org.mx/wps/Taller/'
+    NSS_INPUT = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[1]/td[2]/input'
+    BIRTHDAY_INPUT = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[1]/select'
+    BIRTH_MONTH_INPUT = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[2]/select'
+    BIRTH_YEAR_INPUT = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr[1]/td[3]/select'
+    FIRST_BUTTON_CALLED_SEND = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr/td[1]/button'
+    CONFIRM_DATA_BUTTON = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[6]/td/table/tbody/tr/td/button'
+    OPEN_POPUP = '/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr[3]/td/button'
+    NEXT_BUTTON = '/html/body/form/div/div[1]/div[3]/div[2]/img[2]'
+    CONTINUE_BUTTON = '/html/body/div[1]/div/div[4]/a/img'
+
+
+class InfonavitWorkshopSolver:
+    def __init__(self, nss, birthday, birthMonth, birthYear):
+        self.nss = nss
+        self.birthday = birthday if len(birthday) == 2 else '0'+birthday
+        self.birthMonth = birthMonth if len(birthMonth) == 2 else '0'+birthMonth
+        self.birthYear = birthYear
+
+    def solve(self):
+        userInterface.init(visual_automation=True)
+        userInterface.url(InterfaceInfonavitWorkshop.URL)
+        userInterface.type(InterfaceInfonavitWorkshop.NSS_INPUT, self.nss)
+        userInterface.select(InterfaceInfonavitWorkshop.BIRTHDAY_INPUT, self.birthday)
+        userInterface.select(InterfaceInfonavitWorkshop.BIRTH_MONTH_INPUT, self.birthMonth)
+        userInterface.select(InterfaceInfonavitWorkshop.BIRTH_YEAR_INPUT, self.birthYear)
+        userInterface.click(InterfaceInfonavitWorkshop.FIRST_BUTTON_CALLED_SEND)
+        userInterface.click('/html/body/div[2]/table/tbody/tr[2]/td/table/tbody/tr[3]/td/button')
+        userInterface.url('http://tallerlinea.infonavit.org.mx/wps/TallerWeb/unidad7/index.do')
+        for i in range(0, 2):
+            userInterface.click(InterfaceInfonavitWorkshop.NEXT_BUTTON)
+        userInterface.type('//*[@id="nombre"]', 'A')
+        userInterface.type('//*[@id="precio"]', '1')
+        userInterface.click('//*[@id="ubicacion"]')
+        dragdrop('/html/body/form/div/div[2]/div[4]/div[1]/span[1]', 250, 250)
+
+infonavitWorkshopSolver = InfonavitWorkshopSolver(
+    nss=sys.argv[1],
+    birthday=sys.argv[2],
+    birthMonth=sys.argv[3],
+    birthYear=sys.argv[4]
+)
+
+infonavitWorkshopSolver.solve()
