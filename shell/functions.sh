@@ -1,5 +1,5 @@
 function cdd() {
-  cd "$(ls -d -- */ | fzf)" || echo "Invalid directory"
+  cd "$(ls -dt -- */ | fzf)" || echo "Invalid directory"
 }
 
 function cdc() {
