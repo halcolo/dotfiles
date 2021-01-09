@@ -5,11 +5,7 @@ function cdd() {
 function cdc() {
   ~/Workspace;
   cdd;
-  if [ -z $command];
-  then
-     eval "vi . -c 'q'";
-  fi 
-  eval $command;
+  [ "$1" != '' ] && eval $1 || eval 'vi .';
 }
 
 function j() {
