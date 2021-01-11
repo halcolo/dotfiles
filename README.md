@@ -11,3 +11,9 @@
 * Install your dotfiles `DOTFILES_PATH="$HOME/.dotfiles" DOTLY_PATH="$DOTFILES_PATH/modules/dotly" "$DOTLY_PATH/bin/dot" self install`
 * Restart your terminal
 * Import your packages `dot package import`
+
+## TODO
+[] .gitignore global
+``git config --global core.excludesfile ~/.gitignore_global``
+[] global dependencies
+[] vim
